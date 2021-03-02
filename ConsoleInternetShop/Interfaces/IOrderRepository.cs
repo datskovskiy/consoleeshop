@@ -13,7 +13,7 @@ namespace ConsoleEShop.Interfaces
 
         IReadOnlyList<Order> GetUserOrders(User user);
 
-        void CreateOrder(Order entity);
+        void CreateOrder(User user, List<OrderItem> orderItems);
 
         void UpdateStatusOrder(int id, OrderStatus status);
     }

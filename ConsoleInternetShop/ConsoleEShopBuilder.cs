@@ -36,12 +36,7 @@ namespace ConsoleEShop
 
         void CreateOrder()
         {
-            while ( Console.ReadKey().Key != ConsoleKey.Escape)
-            {
-                var product = FindProductByName();
-                if (product != null)
-
-            }
+            
         }
 
         void PrintProducts()
