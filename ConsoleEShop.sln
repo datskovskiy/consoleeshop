@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleEShop", "ConsoleInternetShop\ConsoleEShop.csproj", "{3A26EB8E-2565-4132-B33E-8124AFE9DD65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleEShop", "ConsoleInternetShop\ConsoleEShop.csproj", "{3A26EB8E-2565-4132-B33E-8124AFE9DD65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleEShop.Tests", "ConsoleEShop.Tests\ConsoleEShop.Tests.csproj", "{4759D2E4-7B1F-406D-97D4-EDCED598D853}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3A26EB8E-2565-4132-B33E-8124AFE9DD65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A26EB8E-2565-4132-B33E-8124AFE9DD65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A26EB8E-2565-4132-B33E-8124AFE9DD65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4759D2E4-7B1F-406D-97D4-EDCED598D853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4759D2E4-7B1F-406D-97D4-EDCED598D853}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4759D2E4-7B1F-406D-97D4-EDCED598D853}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4759D2E4-7B1F-406D-97D4-EDCED598D853}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

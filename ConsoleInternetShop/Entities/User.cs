@@ -13,5 +13,6 @@ namespace ConsoleEShop.Entities
         public byte[] PasswordSalt { get; set; }
         public string Gender { get; set; }
         public UserRoles UserRole { get; set; } = UserRoles.User;
+        public string Email { get; set; }
     }
 }

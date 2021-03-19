@@ -1,27 +1,19 @@
 ﻿using ConsoleEShop.Entities;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
 namespace ConsoleEShop.Data
 {
-    public class StoreContext
+    public class StoreContext : DbContext
     {
-        public StoreContext()
+        public StoreContext(DbContextOptions options) : base(options)
         {
-            Users = new List<User>();
-            Products = new List<Product>();
-            Orders = new List<Order>();
-
-            Seed();
         }
 
-        public List<Product> Products { get; set; }
-        public List<User> Users { get; set; }
-        public List<Order> Orders { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
 
-        private void Seed()
-        {
-            Products.Add(new Product {Id = 1, Name =  "Orange", Price = 100, Category = "Fruits"});
-            Products.Add(new Product {Id = 2, Name = "Melon", Price = 150, Category = "Fruits"});
-        }
     }
 }

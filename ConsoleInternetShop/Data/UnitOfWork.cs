@@ -1,5 +1,6 @@
 ﻿using ConsoleEShop.Interfaces;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,14 +9,30 @@ namespace ConsoleEShop.Data
     public class UnitOfWork : IUnitOfWork
     {
         private readonly StoreContext _context;
+        private Hashtable _repositories;
+
         public UnitOfWork(StoreContext context)
         {
             _context = context;
         }
 
-        public IProductRepository ProductRepository => new ProductRepository(_context);
+        public IRepository<TEntity> Repository<TEntity>() where TEntity : IBaseEntity
+        {
+            if (_repositories == null) _repositories = new Hashtable();
 
-        public IAuthRepository AuthRepository => new AuthRepository(_context);
+            var type = typeof(TEntity).Name;
+
+            if (!_repositories.ContainsKey(type))
+            {
+                var repositoryType = typeof(Repository<>);
+                var repositoryInstance = Activator.CreateInstance(repositoryType.MakeGenericType(typeof(TEntity)), _context);
+
+                _repositories.Add(type, repositoryInstance);
+            }
+
+            return (IRepository<TEntity>)_repositories[type];
+        }
 
     }
+
 }

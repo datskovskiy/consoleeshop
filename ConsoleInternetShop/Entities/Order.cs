@@ -8,6 +8,10 @@ namespace ConsoleEShop.Entities
 {
     public class Order: BaseEntity
     {
+        public Order()
+        {
+        }
+
         public Order(int clientId, IReadOnlyList<OrderItem> orderItems, string address)
         {
             Address = address;

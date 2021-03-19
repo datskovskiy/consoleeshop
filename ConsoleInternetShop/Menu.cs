@@ -14,7 +14,6 @@ namespace ConsoleEShop
         private readonly List<MenuChoice> _choices;
         private readonly Menu _root;
 
-
         public Menu(List<MenuChoice> choices, Menu root)
         {
             _choices = choices;

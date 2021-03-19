@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace ConsoleEShop.Interfaces
 {
-    public interface IAuthRepository
+    public interface IUserService
     {
         User Register(User user, string password);
         User Login(string username, string password);
         bool UserExists(string username);
+        void UpdateUser(IUser user, string newEmail);
+        IReadOnlyList<User> GetUsers();
     }
 }

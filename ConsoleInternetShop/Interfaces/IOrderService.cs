@@ -1,5 +1,4 @@
-﻿
-using ConsoleEShop.Entities;
+﻿using ConsoleEShop.Entities;
 using ConsoleEShop.Enums;
 using System;
 using System.Collections.Generic;
@@ -7,13 +6,13 @@ using System.Text;
 
 namespace ConsoleEShop.Interfaces
 {
-    public interface IOrderRepository
+    public interface IOrderService
     {
         Order GetOrderById(int id);
 
-        IReadOnlyList<Order> GetUserOrders(User user);
+        IReadOnlyList<Order> GetUserOrders(IUser user);
 
-        void CreateOrder(User user, List<OrderItem> orderItems);
+        void CreateOrder(Order order);
 
         void UpdateStatusOrder(int id, OrderStatus status);
     }

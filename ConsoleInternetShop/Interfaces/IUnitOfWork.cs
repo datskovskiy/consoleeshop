@@ -6,7 +6,7 @@ namespace ConsoleEShop.Interfaces
 {
     public interface IUnitOfWork
     {
-        IProductRepository ProductRepository { get; }
-        IAuthRepository AuthRepository { get; }
+        IRepository<T> Repository<T>() where T : IBaseEntity;
     }
+
 }

@@ -7,16 +7,17 @@ using System.Threading.Tasks;
 
 namespace ConsoleEShop.Interfaces
 {
-    public interface IProductRepository
+    public interface IProductService
     {
         Product GetProductById(int id);
+
         Product GetProductByName(string name);
 
         IReadOnlyList<Product> GetProducts();
 
-        void CreateProduct(Product entity);
+        void CreateProduct(string productName, string category, string description, decimal price);
 
-        void UpdateProduct(int id, Product entity);
+        void UpdateProduct(int id, string productName, string category, string description, decimal price);
 
         void DeleteProduct(int id);
     }
